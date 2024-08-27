@@ -1,7 +1,9 @@
+import os
 
 import speech_recognition as sr
 import pyttsx3
 import webbrowser
+import openai
 
 def say(text):
     engine = pyttsx3.init()
@@ -126,6 +128,21 @@ if __name__ == '__main__':
             if f"Open {site[0]}".lower() in query.lower():
                 say(f"Opening {site[0]} sir....")
                 webbrowser.open(site[1])
+
+        import os
+
+        if "open music" in query:
+            musicPath = r"C:\Users\MUHIB\Downloads\Deep learning project end to end _ Potato Disease Classification - 2 _Data collection_ preprocessing(720P_HD).mp4"
+            os.system(f"start {musicPath}")
+        import datetime
+
+        if "the time" in query:
+            hour = datetime.datetime.now().strftime("%H")
+            min = datetime.datetime.now().strftime("%M")
+            say(f"Sir, the time is {hour} bajjke {min} minutes")
+
+        if "open vs code " in query.lower():
+            os.system("open /System/Applications/Visual Studio Code.app")
 
         if query:
            say(query)
