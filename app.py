@@ -122,6 +122,7 @@ if __name__ == '__main__':
         ["4chan", "https://www.4chan.org"],
         ["Disqus", "https://www.disqus.com"],
         ["wikipedia", "https://www.wikipedia.com"]
+
     ]
 
         for site in sites:
@@ -141,8 +142,11 @@ if __name__ == '__main__':
             min = datetime.datetime.now().strftime("%M")
             say(f"Sir, the time is {hour} bajjke {min} minutes")
 
-        if "open vs code " in query.lower():
-            os.system("open /System/Applications/Visual Studio Code.app")
+        if "open vs code".lower() in query.lower():
+            os.system(f"open C:/Users/MUHIB/Desktop/Visual Studio Code")
+
+
+
 
         if query:
            say(query)
